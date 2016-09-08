@@ -11,11 +11,20 @@ export default Ember.Component.extend({
   layout,
   tagName: '',
   horizon: Ember.inject.service(),
-  hasAuthToken: computed.alias('horizon.hasAuthToken'),
+  isLoggedIn: computed.alias('horizon.isLoggedIn'),
   init() {
     this._super(...arguments);
     get(this, 'horizon').getAuthServices()
       .then(services => set(this, 'authServices', makeArray(services)));
+  },
+
+  actions: {
+    authenticate(service) {
+      get(this, 'horizon').authenticate(service.id);
+    },
+    logout() {
+      get(this, 'horizon').logout();
+    }
   }
 
 });

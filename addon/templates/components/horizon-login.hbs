@@ -1,10 +1,13 @@
-{{#if hasAuthToken}}
-  {{yield}}
+{{#if isLoggedIn}}
+  {{yield (hash 
+    service=service 
+    logout=(action 'logout')
+  )}}
 {{else}}
   <div class="ember-horizon-login login-buttons">
     {{#each authServices as |service|}}
       <span class="service-provider {{service.id}}">
-        <button class="login btn">
+        <button class="login btn" onclick={{action 'authenticate' service}}>
           <span class="icon">
             <img src="ember-horizon-login/images/{{service.id}}.png">
           </span>
