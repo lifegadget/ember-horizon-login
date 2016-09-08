@@ -1,0 +1,21 @@
+{{#if hasAuthToken}}
+  {{yield}}
+{{else}}
+  <div class="ember-horizon-login login-buttons">
+    {{#each authServices as |service|}}
+      <span class="service-provider {{service.id}}">
+        <button class="login btn">
+          <span class="icon">
+            <img src="ember-horizon-login/images/{{service.id}}.png">
+          </span>
+          <span class="text">
+            Login using
+            <br>
+            <span class="name">{{service.id}}</span>
+          </span>
+        </button>
+      </span>
+    {{/each}}
+  </div>
+{{/if}}
+

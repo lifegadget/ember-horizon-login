@@ -1,0 +1,49 @@
+.ember-horizon-login.login-buttons {
+  display: flex;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+}
+
+.ember-horizon-login .service-provider {
+  display: flex;
+}
+
+.ember-horizon-login .name {
+  font-weight: 700;
+}
+
+.ember-horizon-login .btn {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  touch-action: manipulation;
+  font-size: 1.4rem;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  background: #E0E1E2;
+  color: rgba(0,0,0, 0.6);
+  transition: all 0.25s;
+}
+
+.ember-horizon-login .btn:hover {
+  background-color: #CACBCD;
+  color: rgba(0,0,0, 0.8);
+}
+
+.ember-horizon-login .btn:active {
+  background-color: #BABBBC;
+  color: rgba(0,0,0, 0.9);
+}
+
+.ember-horizon-login .icon {
+  padding-right: 0.5em;
+}
+.ember-horizon-login .icon img {
+  width: 64px;
+  height: 64px;
+}
