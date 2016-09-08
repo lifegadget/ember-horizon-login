@@ -1,0 +1,1 @@
+export { default } from 'ember-horizon-login/components/horizon-login';
